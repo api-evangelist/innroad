@@ -1,0 +1,113 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: innRoad
+providerId: innroad
+created: '2026-07-03'
+modified: '2026-07-03'
+reconciled: false
+tags:
+- Hospitality
+- Hotel PMS
+- Property Management
+- Booking Engine
+- Plans
+description: >-
+  innRoad does not publish standardized, self-serve pricing tiers. Pricing is
+  customized per property, quoted after a demo. innRoad's own FAQ states the
+  core PMS "typically falls around $150 per month for most properties," billed
+  month-to-month with no long-term contract ("cancel anytime"). A free trial
+  and free demo are available. Custom packages exist for properties needing
+  volume discounts, multi-product discounts (bundling the booking engine,
+  channel manager, revenue management, and payments), or country-specific
+  training. No per-room, per-booking, or usage-based rate is publicly
+  disclosed, and there is no separate pricing for API/developer access since
+  no public developer API exists.
+notes: >-
+  No published numeric rate card beyond the representative "~$150/month"
+  figure exists to reconcile. Verify current terms directly with innRoad
+  sales; this file reflects only the qualitative pricing model described on
+  innroad.com/pricing.
+sources:
+- https://www.innroad.com/pricing/
+- https://www.innroad.com/
+- https://www.getapp.com/hospitality-travel-software/a/innroad/
+- https://hoteltechreport.com/operations/property-management-systems/innroad
+plans:
+- id: innroad-essentials
+  name: Essentials
+  type: paid
+  description: >-
+    Core cloud PMS for a single independent property, billed monthly with no
+    long-term contract. Includes full data migration, a dedicated
+    implementation advisor, and 24/7 support. innRoad's FAQ cites a
+    representative starting price of roughly $150/month for most properties;
+    final price depends on room count and selected modules.
+  entries:
+  - label: Monthly Subscription
+    name: essentials_monthly
+    type: flat
+    metric: property
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: representative ~$150/month for a typical property (final quote varies)
+    userMultiplied: false
+  elements:
+  - name: Property Management System
+  - name: Data Migration
+  - name: Dedicated Implementation Advisor
+  - name: 24/7 Support
+  - name: Month-to-Month (Cancel Anytime)
+- id: innroad-free-trial
+  name: Free Trial / Demo
+  type: free
+  description: >-
+    A no-cost demo and trial period offered before purchase, used to evaluate
+    the platform on a prospective property's own setup.
+  entries:
+  - label: Trial Period
+    name: trial
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: one-time
+    geo: global
+    unit: 1
+    price: free (time-boxed trial / guided demo)
+    userMultiplied: false
+  elements:
+  - name: Guided Product Demo
+  - name: Trial Access
+- id: innroad-custom
+  name: Custom / Multi-Property
+  type: enterprise
+  description: >-
+    Custom pricing for hotel management companies and multi-property
+    portfolios needing volume discounts, multi-product discounts (bundling
+    Booking Engine, Channel Manager, Revenue Management, and innRoad
+    Payments), or country-specific training. Contact innRoad sales for a
+    quote.
+  entries:
+  - label: Custom Agreement
+    name: custom
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales; scaled by property count and bundled modules
+    userMultiplied: false
+  elements:
+  - name: Volume Discounts
+  - name: Multi-Product Discounts
+  - name: Country-Specific Training
+  - name: Booking Engine
+  - name: Channel Manager
+  - name: Revenue Management
+  - name: innRoad Payments
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

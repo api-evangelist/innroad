@@ -1,0 +1,40 @@
+aid: innroad
+url: https://raw.githubusercontent.com/api-evangelist/innroad/refs/heads/main/apis.yml
+name: innRoad
+kind: company
+description: innRoad is a cloud-based hotel property management system (PMS) that
+  bundles PMS, a direct booking engine, and a channel manager (OTA distribution to
+  Expedia, Booking.com, Airbnb, and others) into one platform, built for independent
+  hotels, boutique properties, and small hotel management companies. innRoad also
+  offers 40+ pre-built partner connections - point-of-sale (Lightspeed, Oracle
+  Hospitality, Squirrel, Positouch, Uniwell), door locks (RemoteLock, Saflok, ONITY),
+  guest messaging (Akia), accounting (M3, Inn-Flow), and in-house payment processing
+  (innRoad Payments) - that are toggled on inside the application. innRoad does NOT
+  publish a public, self-service developer API. There is no developer portal, no
+  public API reference, no OpenAPI definition, and no documented WebSocket or
+  webhook API as of this cataloging; every listed integration is a pre-built,
+  partner-gated connection rather than an open surface a third-party developer can
+  register for and call.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Hospitality
+- Hotel PMS
+- Property Management
+- Booking Engine
+- Channel Manager
+- Revenue Management
+- Independent Hotels
+- Partner Integrations
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/innroad-inc
+- type: Website
+  url: https://www.innroad.com/
+- type: Plans
+  url: plans/innroad-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

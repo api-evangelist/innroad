@@ -1,0 +1,95 @@
+aid: innroad
+name: innRoad
+review:
+  question: Does innRoad expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. innRoad publishes no public API of any
+    kind - REST or otherwise - so there is no server-push transport (WebSocket
+    or SSE) on an innRoad-owned API to model. innRoad's real-time-feeling
+    behavior (rate/inventory sync to OTAs, reservation sync to guest messaging
+    and accounting partners) is delivered through pre-built, partner-gated
+    connections configured inside the innRoad application, not through a
+    documented public protocol.
+findings:
+  summary: |
+    innRoad does not publish a documented public WebSocket API - and, more
+    broadly, does not publish any public, self-service developer API.
+    innRoad is a cloud-based hotel property management system bundling PMS,
+    a direct booking engine, and a channel manager for independent hotels,
+    boutique properties, and small hotel management companies. It ships
+    40+ pre-built partner connections (OTA channel management, POS,
+    door locks, guest messaging, accounting, payments) that are enabled and
+    configured from inside the innRoad app rather than through a developer
+    console. Third-party research explicitly categorizes innRoad as having
+    "no public API" with no self-serve access, no authentication
+    documentation, and no app marketplace. No developer.innroad.com or
+    api.innroad.com exists, no public API reference or OpenAPI definition
+    is published, and no WebSocket (ws:// or wss://) endpoint is documented
+    anywhere on innroad.com or support.innroad.com.
+  publicApi: |
+    No public API. There is no self-service developer portal or API
+    reference, and no published authentication scheme (API keys, OAuth, or
+    otherwise) for third-party developers. Support articles reference
+    "innRoad's API integration" only in passing when describing how
+    individual partner connections (e.g., Akia guest messaging) sync data,
+    with no technical detail - no endpoint list, request/response schema,
+    or base URL - made public. Each pre-built integration (Akia, Lightspeed
+    Restaurant, RemoteLock, OTAs, etc.) is built and maintained by innRoad's
+    own engineering team and simply toggled on per property; there is no
+    evidence of a distinct, named, publicly-described API product
+    comparable to a developer platform.
+  transports:
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere by innRoad as of the review date.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference is published. Internal/partner integrations may use REST under the hood, but no base URL, endpoint, or schema is disclosed.
+  endpointsModeled: false
+  endpointsModeledNote: |
+    Unlike some gated-API companies that describe at least one named API
+    capability in marketing copy (e.g., a "Deploy" or "Connect" endpoint),
+    innRoad makes no such claim anywhere in its public site or support
+    docs. No endpoints are modeled here because there is not even a single
+    publicly-named API capability to describe honestly - only a general,
+    undocumented reference to "API integration" used loosely to mean
+    "pre-built partner connection."
+sources:
+  - url: https://www.innroad.com/
+    type: Website
+    note: Product overview - PMS, booking engine, channel manager for independent hotels. No API mentioned.
+  - url: https://www.innroad.com/about/
+    type: Website
+    note: Company/about page. No developer resources, API, or technology partner program named.
+  - url: https://www.innroad.com/pricing/
+    type: Plans
+    note: Custom, property-based pricing; core PMS "typically around $150 per month"; month-to-month, no long-term contract; free trial available.
+  - url: https://hoteltechreport.com/innroad/integrations
+    type: Documentation
+    note: Lists 40+ pre-built third-party integration categories (POS, channel managers, guest messaging, door locks, accounting). No mention of "API" anywhere on the page.
+  - url: https://support.innroad.com/support/solutions/articles/153000146067-akia-integration
+    type: Documentation
+    note: Describes enabling the Akia guest-messaging connection inside the app and syncing reservations in real time. Mentions "innRoad's API integration" only in passing, with no technical detail.
+  - url: https://rapideyeinspections.com/blog/hotel-pms-open-api-comparison/
+    type: Documentation
+    note: Independent 2026 PMS scorecard explicitly categorizes innRoad as "No public API," with self-serve access, auth docs, AI-readiness, and app marketplace all marked "No" or "n/a."
+  - url: https://www.linkedin.com/company/innroad-inc
+    type: LinkedIn
+    note: Official company LinkedIn page.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket surface exists, and innRoad publishes no public API to
+    model at all - not even one named, gated capability. The apis.yml entry
+    was authored as an honest company stub (no apis array), documenting the
+    pre-built, partner-gated integration model and the published
+    subscription pricing. No AsyncAPI document was created because there is
+    no innRoad-owned server-push transport; any real-time behavior lives
+    inside the toggled-on partner connections themselves.
