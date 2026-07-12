@@ -29,12 +29,16 @@ created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.19'
 common:
+- type: DomainSecurity
+  url: security/innroad-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/innroad-inc
 - type: Website
   url: https://www.innroad.com/
 - type: Plans
   url: plans/innroad-plans-pricing.yml
+- type: Blog
+  url: https://www.innroad.com/feed/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
