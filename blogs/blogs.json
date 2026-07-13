@@ -1,0 +1,13 @@
+{
+  "repo": "innroad",
+  "feeds": [
+    {
+      "source": "https://www.innroad.com/feed/",
+      "feed_url": "https://www.innroad.com/feed/",
+      "title": "innRoad",
+      "saved": 1
+    }
+  ],
+  "fetched": "2026-07-11T11:43:46Z",
+  "post_count": 11
+}
