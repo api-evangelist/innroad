@@ -15,6 +15,17 @@ description: innRoad is a cloud-based hotel property management system (PMS) tha
   webhook API as of this cataloging; every listed integration is a pre-built,
   partner-gated connection rather than an open surface a third-party developer can
   register for and call.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
