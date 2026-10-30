@@ -1,4 +1,4 @@
-# innRoad (innroad)
+# innRoad
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,49 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-innRoad is a cloud-based hotel property management system (PMS) that bundles PMS, a direct booking engine, and a channel manager (OTA distribution to Expedia, Booking.com, Airbnb, and others) into one platform, built for independent hotels, boutique properties, and small hotel management companies. innRoad also offers 40+ pre-built partner connections - point-of-sale (Lightspeed, Oracle Hospitality, Squirrel, Positouch, Uniwell), door locks (RemoteLock, Saflok, ONITY), guest messaging (Akia), accounting (M3, Inn-Flow), and in-house payment processing (innRoad Payments) - that are toggled on inside the application.
+innRoad is a cloud-based hotel property management system (PMS) that bundles PMS, a direct booking engine, and a channel manager (OTA distribution to Expedia, Booking.com, Airbnb, and others) into one platform, built for independent hotels, boutique properties, and small hotel management companies. innRoad also offers 40+ pre-built partner connections - point-of-sale (Lightspeed, Oracle Hospitality, Squirrel, Positouch, Uniwell), door locks (RemoteLock, Saflok, ONITY), guest messaging (Akia), accounting (M3, Inn-Flow), and in-house payment processing (innRoad Payments) - that are toggled on inside the application. innRoad does NOT publish a public, self-service developer API. There is no developer portal, no public API reference, no OpenAPI definition, and no documented WebSocket or webhook API as of this cataloging; every listed integration is a pre-built, partner-gated connection rather than an open surface a third-party developer can register for and call.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/innroad/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/innroad/refs/heads/main/apis.yml)
+**Areas:** Hospitality · Hotel PMS · Property Management · Booking Engine · Channel Manager · Revenue Management · Independent Hotels · Partner Integrations
 
-## API Access Model (Important)
+## innRoad on APIs.io
 
-**innRoad does not publish a public, self-service developer API.** There is no developer portal, no public API reference, no OpenAPI definition, and no documented WebSocket or webhook API at the time of cataloging. This entry is intentionally a stub that documents the company and its access model honestly rather than fabricating an API surface.
+Everything profiled for innRoad is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/innroad/](https://apis.io/providers/innroad/)** — or go straight to one of the APIs or properties below.
 
-How integration actually works:
+### Published properties
 
-- **Partner-gated, pre-built connections.** Every listed integration (OTAs/channel management, POS, door locks, guest messaging, accounting) is built and maintained by innRoad's own engineering team and simply enabled per property inside the app - there is no self-serve developer console or API key signup.
-- **"API integration" is used loosely.** Support articles occasionally reference "innRoad's API integration" when describing how a specific partner connection (e.g., Akia guest messaging) syncs reservation and guest data, but no technical detail - endpoint paths, request/response schema, or base URL - is made public anywhere.
-- **Independently confirmed as closed.** A 2026 third-party PMS API scorecard explicitly categorizes innRoad as "No public API," with self-serve access, authentication docs, AI-readiness, and an app marketplace all marked "No" or "n/a."
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Because no public endpoints, request/response schemas, or authentication details are documented, no `openapi/`, `collections/`, `rate-limits/`, or `finops/` artifacts are included, and no `apis` array is asserted in `apis.yml`. If innRoad opens partner API documentation in the future, this entry can be expanded with real, sourced endpoints.
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Hospitality
-- Hotel PMS
-- Property Management
-- Booking Engine
-- Channel Manager
-- Revenue Management
-- Independent Hotels
-- Partner Integrations
+- [Innroad Domain Security](https://apis.io/security/innroad/innroad-domain-security/)
 
-## Timestamps
+#### Plans and pricing (1)
 
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
+Published plans, tiers and prices.
 
-## Pricing
+- [Innroad Plans Pricing](https://apis.io/plans/innroad/innroad-plans-pricing/)
 
-innRoad uses custom, property-based pricing rather than published self-serve tiers. Its own FAQ cites the core PMS as "typically around $150 per month for most properties," billed month-to-month with no long-term contract ("cancel anytime"), and a free trial/demo is available. Custom packages exist for hotel management companies needing volume discounts, multi-product discounts (Booking Engine, Channel Manager, Revenue Management, innRoad Payments), or country-specific training. See [Plans & Pricing](plans/innroad-plans-pricing.yml).
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [LinkedIn](https://www.linkedin.com/company/innroad-inc)
 - [Website](https://www.innroad.com/)
-- [Plans](plans/innroad-plans-pricing.yml)
+- [Blog](https://www.innroad.com/feed/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 5.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/innroad/](https://apis.io/providers/innroad/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for innRoad: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/innroad/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
